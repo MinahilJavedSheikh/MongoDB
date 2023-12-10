@@ -1,0 +1,113 @@
+<!-- index.html -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Management System</title>
+    <style>
+       body {
+    font-family: Arial, sans-serif;
+    background-color: #f2f2f2;
+    margin: 20px;
+}
+
+h1 {
+    color: #333;
+}
+
+h2 {
+    color: #666;
+}
+
+form {
+    margin-bottom: 20px;
+}
+
+label {
+    display: block;
+    margin: 10px 0;
+    color: #333;
+}
+
+input {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 10px;
+    box-sizing: border-box;
+}
+
+button {
+    background-color: #4caf50;
+    color: white;
+    padding: 10px;
+    border: none;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #45a049;
+}
+
+#studentDetails {
+    margin-top: 20px;
+    color: #333;
+}
+    </style>
+</head>
+    <body>
+
+        <h1>Student Management System</h1>
+    
+        <h2>Add Student</h2>
+        <form id="addStudentForm">
+            <label for="addName">Name:</label>
+            <input type="text" id="addName" required>
+            <br>
+            <label for="addAge">Age:</label>
+            <input type="number" id="addAge" required>
+            <br>
+            <label for="addGrade">Grade:</label>
+            <input type="text" id="addGrade" required>
+            <br>
+            <button type="button" onclick="addStudent()">Add Student</button>
+        </form>
+    
+        <h2>Update Student</h2>
+        <form id="updateStudentForm">
+            <label for="updateId">Student ID:</label>
+            <input type="text" id="updateId" required>
+            <br>
+            <label for="updateName">Name:</label>
+            <input type="text" id="updateName" required>
+            <br>
+            <label for="updateAge">Age:</label>
+            <input type="number" id="updateAge" required>
+            <br>
+            <label for="updateGrade">Grade:</label>
+            <input type="text" id="updateGrade" required>
+            <br>
+            <button type="button" onclick="updateStudent()">Update Student</button>
+        </form>
+    
+        <h2>Delete Student</h2>
+        <form id="deleteStudentForm">
+            <label for="deleteId">Student ID:</label>
+            <input type="text" id="deleteId" required>
+            <br>
+            <button type="button" onclick="deleteStudent()">Delete Student</button>
+        </form>
+    
+        <h2>Get Student</h2>
+        <form id="getStudentForm">
+            <label for="getStudentId">Student ID:</label>
+            <input type="text" id="getStudentId" required>
+            <br>
+            <button type="button" onclick="getStudent()">Get Student</button>
+            <div id="studentDetails"></div>
+        </form>
+    
+        <script src="index.js"></script>
+    </body>
+</html>
